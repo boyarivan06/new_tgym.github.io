@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photoalbums</title>
+</head>
+<body>
+{% for album in data %}
+<div>
+    <h3>{{album.title}}</h3>
+    <p>{{album.comment}}</p>
+</div>
+{% endfor %}
+</body>
+</html>

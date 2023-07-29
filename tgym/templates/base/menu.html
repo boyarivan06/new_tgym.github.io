@@ -1,0 +1,46 @@
+<nav>
+    <div id="nav-div">
+        <ul class="menu-ul">
+            <li class='menu-li'>
+                <a class='menu-item' href="#">Главная</a>
+            </li>
+            <li class="dropdown menu-li">
+                    <a class="dropbtn menu-item" onclick="openMenu('mediaSubmenu')">Медиа</a>
+                    <ul class="dropdown-content" id="mediaSubmenu">
+                        <li class='sub-menu-li'>
+                            <a class='sub-menu-item' href="#">Фото</a>
+                        </li>
+                        <li class='sub-menu-li'>
+                            <a class='sub-menu-item' href="#">Видео</a>
+                        </li>
+                    </ul>
+            </li>
+
+            <li class="dropdown menu-li">
+                <a onclick="openMenu('classSubmenu')" class='dropbtn menu-item'>Классы</a>
+                <ul class="dropdown-content" id="classSubmenu">
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">1а</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">1б</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">1в</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">1г</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">1д</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">2</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">3</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">4</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">5</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">6</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">7</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">8</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">9</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">10</a></li>
+                        <li class='sub-menu-li'><a class='sub-menu-item' href="#">11</a></li>
+                </ul>
+            </li>
+
+            <li class='menu-li'>
+                <a class='menu-item' href="#">ЭЖД</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<script src="{% static 'js/menu.js' %}"></script>
