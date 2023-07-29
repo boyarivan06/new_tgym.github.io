@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Album</title>
+</head>
+<body>
+<h1>{{album.title}}</h1>
+<h2>{{album.comment}}</h2>
+<img src="{{album.image.url}}" alt="">
+{% for photo in album.photo_set.all %}
+<a href="/photo/{{photo.id}}">
+    <div>
+       <h4>{{photo.label}}</h4>
+        <img src="{{photo.image.url}}" alt="img???">
+    </div>
+</a>
+{% endfor %}
+<form action="{% url 'image_upload' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="action_type" value="start">
+    <input type="hidden" name="album_id" value="{{album.id}}">
+    <input type="submit" value="Add photo">
+</form>
+
+</body>
+</html>

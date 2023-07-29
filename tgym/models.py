@@ -1,7 +1,7 @@
 from django.contrib.auth.models import AbstractUser, User
 from django.contrib.auth import get_user_model
 from django.db.models import Model, CASCADE
-from django.db.models import CharField, IntegerField, TextField, DateTimeField, ImageField
+from django.db.models import CharField, IntegerField, TextField, DateTimeField, ImageField, DateField
 from django.db.models import OneToOneField, ForeignKey
 from django.utils import timezone
 
@@ -31,3 +31,10 @@ class Photo(Model):
     label = CharField(max_length=255)
     photoalbum = ForeignKey(to=PhotoAlbum, on_delete=CASCADE)
     image = ImageField(upload_to='images/')
+
+
+class Grade(Model):
+    year_grad = DateField()
+    image = ImageField(upload_to='images/')
+    blog = OneToOneField(to=Blog, on_delete=CASCADE)
+    #  monitor = Teacher !!!

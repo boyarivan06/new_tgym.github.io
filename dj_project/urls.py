@@ -29,7 +29,10 @@ urlpatterns = [
     path('image_upload/', views.upload_image_view, name='image_upload'),
     path('success/', views.success, name='success'),
     path('new_photo_album/', views.new_photo_album, name='new_photo_album'),
-    path('accounts/profile/', views.profile_view, name='profile')
+    path('accounts/profile/', views.profile_view, name='profile'),
+    path('photoalbums/', views.photoalbums_view, name='photoalbums'),
+    path('photoalbums/<int:id>', views.photoalbum_view),
+    path('photo/<int:id>', views.photo_view)
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

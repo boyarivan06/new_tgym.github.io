@@ -8,6 +8,8 @@
     <form method = "post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
+        <input type="hidden" name="action_type" value="adding">
+        <input type="hidden" name="album_id" value="{{album_id}}">
         <button type="submit">Upload</button>
     </form>
 </body>

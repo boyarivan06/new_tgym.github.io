@@ -6,10 +6,12 @@
 </head>
 <body>
 {% for album in data %}
-<div>
+<a href="{{album.id}}">
+    <div>
     <h3>{{album.title}}</h3>
     <p>{{album.comment}}</p>
 </div>
+</a>
 {% endfor %}
 </body>
 </html>

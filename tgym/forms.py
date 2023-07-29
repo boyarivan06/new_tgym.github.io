@@ -15,7 +15,7 @@ class NewPostForm(Form):
 class NewPhotoForm(ModelForm):
     class Meta:
         model = Photo
-        fields = ['label', 'image', 'photoalbum']
+        fields = ['label', 'image']
 
 
 class NewPhotoAlbumForm(ModelForm):
