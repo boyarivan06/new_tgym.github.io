@@ -8,9 +8,10 @@
 {% for album in data %}
 <a href="{{album.id}}">
     <div>
-    <h3>{{album.title}}</h3>
-    <p>{{album.comment}}</p>
-</div>
+        <h3>{{album.title}}</h3>
+        <p>{{album.comment}}</p>
+        <img src="{{album.image.url}}" alt="">
+    </div>
 </a>
 {% endfor %}
 </body>

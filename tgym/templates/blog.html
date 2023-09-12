@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+<h1>{{blog.title}}</h1>
+<h2>{{blog.author.username}}</h2>
+<p>{{blog.datetime_created}}</p>
+{% for post in blog.post_set.all %}
+
+<div>
+    <a href="/posts/{{post.id}}/">
+        <h3>{{post.title}}</h3>
+        <h4>{{post.author.username}}</h4>
+        <p>{{post.text}}</p>
+    </a>
+</div>
+{% endfor %}
+</body>
+</html>

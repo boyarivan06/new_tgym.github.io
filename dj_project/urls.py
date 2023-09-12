@@ -32,7 +32,14 @@ urlpatterns = [
     path('accounts/profile/', views.profile_view, name='profile'),
     path('photoalbums/', views.photoalbums_view, name='photoalbums'),
     path('photoalbums/<int:id>', views.photoalbum_view),
-    path('photo/<int:id>', views.photo_view)
+    path('photo/<int:id>', views.photo_view),
+    path('video/', views.video_view, name='video'),
+    path('blogs/', views.blogs_view, name='blogs'),
+    path('blogs/<int:id>/', views.blog_view),
+    path('posts/<int:id>/', views.post_view),
+    path('skeds/', views.skeds_view, name='skeds'),
+    path('new_sked/', views.new_sked, name='new_sked')
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

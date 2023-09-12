@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Расписание</title>
+</head>
+<body>
+{% if sked != '0' %}
+<div><p>{{sked.date}}</p><a href="{{sked.file.url}}">детям</a></div>
+{% else %}
+<div>Расписания пока нет</div>
+{% endif%}
+</body>
+</html>

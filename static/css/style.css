@@ -1,0 +1,68 @@
+:root {
+    /*
+#033540
+#015366
+#63898C
+#A7D1D2
+#E0F4F5
+*/
+/*
+#091d36
+#3a4e7a
+#5e83ba
+#c2d2e9
+#f1f1f0
+*/
+    --color1: #091d36;
+    --color2: #3a4e7a;
+    --color3: #5e83ba;
+    --color4: #c2d2e9;
+    --color5: #f1f1f0;
+}
+
+
+@font-face {
+    font-family: 'Europe';
+    src: url('../fonts/europe-normal.ttf');
+}
+
+
+body {
+    text-align: center;
+    font-family: 'Europe';
+    display: grid;
+    margin: 0;
+    color: var(--color1);
+    background-color: var(--color5);
+}
+header {
+    text-align: center;
+    color: var(--color5);
+    background-color: var(--color1);
+}
+
+nav {
+    color: var(--color5);
+    background-color: var(--color2);
+}
+
+
+a {
+    color: var(--color5);
+    text-decoration: none;
+}
+a.new-link {
+    color: var(--color1);
+}
+
+a:hover {
+    color: var(--color1);
+}
+a.new-link:hover {
+    color: var(--color2);
+}
+
+a.unexisting {
+    margin: 0;
+    padding: 0;
+}

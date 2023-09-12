@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    {% load static %}
+</head>
+<body>
+{% for blog in data %}
+<a href="{{blog.id}}">
+    <h3>{{blog.title}}</h3>
+    <p>{{blog.author.username}}</p>
+</a>
+{% endfor %}
+</body>
+</html>

@@ -1,5 +1,5 @@
 from django.forms import HiddenInput, Form, ModelForm, IntegerField, CharField, PasswordInput
-from tgym.models import Photo, PhotoAlbum
+from tgym.models import Photo, PhotoAlbum, Video, Blog, Post, Sked
 
 
 class NewBlogForm(Form):
@@ -22,3 +22,15 @@ class NewPhotoAlbumForm(ModelForm):
     class Meta:
         model = PhotoAlbum
         fields = ['title', 'comment', 'image']
+
+
+class NewVideoForm(ModelForm):
+    class Meta:
+        model = Video
+        fields = ['video_source', 'label']
+
+
+class NewSkedForm(ModelForm):
+    class Meta:
+        model = Sked
+        fields = ['date', 'file']

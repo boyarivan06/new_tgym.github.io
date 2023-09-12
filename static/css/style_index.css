@@ -1,62 +1,11 @@
-:root {
-    /*
-#033540
-#015366
-#63898C
-#A7D1D2
-#E0F4F5
-*/
-/*
-#091d36
-#3a4e7a
-#5e83ba
-#c2d2e9
-#f1f1f0
-*/
-    --color1: #091d36;
-    --color2: #3a4e7a;
-    --color3: #5e83ba;
-    --color4: #c2d2e9;
-    --color5: #f1f1f0;
-}
-
-@keyframes skedsAnima {
-    0% {
-        border-color: var(--color1);
-    }
-    20% {
-        border-color: var(--color2);
-    }
-    40% {
-        border-color: var(--color3);
-    }
-    60% {
-        border-color: var(--color4);
-    }
-    80% {
-        border-color: var(--color5);
-    }
-}
-
-@font-face {
-    font-family: 'Europe';
-    src: url('../fonts/europe-normal.ttf');
-}
 
 body {
-    text-align: center;
-    font-family: 'Europe';
-    display: grid;
     grid-template-columns: 15vw 10vw 5vw 45vw 25vw;
-    grid-template-rows: 15vw 5vh calc(95vh - 15vw);
-    margin: 0;
-    color: var(--color1);
-    background-color: var(---color5);
+    grid-template-rows: 15vw 5vh calc(85vh - 15vw) 10vh;
 }
 header {
     font-size: 17px;
     padding: 20px;
-    text-align: center;
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 1;
@@ -70,7 +19,7 @@ nav {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
-    grid-row-end: 4;
+    grid-row-end: 5;
     position: sticky;
     width: auto;
     padding: 5px;
@@ -80,15 +29,16 @@ nav {
     grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-end: 5;
     background-color: var(--color5);
     overflow: auto;
+    color: var(--color1);
 }
 .notices {
     grid-column-start: 5;
     grid-column-end: 6;
     grid-row-start: 2;
-    grid-row-end: 4;
+    grid-row-end: 5;
     color: var(--color5);
     background-color: var(--color3);
 
@@ -124,16 +74,17 @@ nav {
     border: 2px solid transparent;
 }
 
-a {
+footer {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    color: transparent;
+    transition-duration: 0.25s;
+
+}
+footer:hover {
+    background-color: var(--color1);
     color: var(--color5);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--color1)
-}
-
-a.unexisting {
-    margin: 0;
-    padding: 0;
+    transition: 0.25s;
 }
